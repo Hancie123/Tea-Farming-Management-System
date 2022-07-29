@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+
+
+.wrapper1 .main_content h1{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+#employ{
+
+
+    background-color: #717171;
+    
+}
+
+
+
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body{
+   background-color: #f3f5f9;
+}
+
+.wrapper1{
+  display: flex;
+  position: relative;
+}
+
+.wrapper1 .sidebar1{
+  width: 200px;
+  height: 100%;
+  background: #4b4276;
+  padding: 30px 0px;
+  position: fixed;
+}
+
+.wrapper1 .sidebar1 h2{
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.wrapper1 .sidebar1 ul li{
+  padding: 15px;
+ 
+  border-bottom: 1px solid #bdb8d7;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  border-top: 1px solid rgba(255,255,255,0.05);
+}    
+
+.wrapper1 .sidebar1 ul li a{
+    text-decoration: none;
+  color: #bdb8d7;
+  display: block;
+}
+
+.wrapper1 .sidebar1 ul li a .fas{
+  width: 25px;
+}
+
+.wrapper1 .sidebar1 ul li:hover{
+  background-color: #594f8d;
+}
+    
+.wrapper1 .sidebar1 ul li:hover a{
+  color: #fff;
+}
+ 
+.wrapper1 .sidebar1 .social_media{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.wrapper1 .sidebar1 .social_media a{
+  display: block;
+  width: 40px;
+  background: #594f8d;
+  height: 40px;
+  line-height: 45px;
+  text-align: center;
+  margin: 0 5px;
+  color: #bdb8d7;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.wrapper1 .main_content{
+  width: 100%;
+  margin-left: 200px;
+  
+}
+
+
+@media (max-height: 500px){
+  .social_media{
+    display: none !important;
+  }
+}

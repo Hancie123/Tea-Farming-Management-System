@@ -1,0 +1,15 @@
+CREATE TABLE admin (Admin_ID int(11) PRIMARY KEY AUTO_INCREMENT, Name varchar(50) NOT NULL, DOB varchar(50) NOT NULL, Email varchar(50) NOT NULL, Mobile varchar(50) NOT NULL, Address varchar(255) NOT NULL, Username varchar(50) NOT NULL, Password varchar(50) NOT NULL); 
+
+CREATE TABLE employees (Employees_ID int(10) PRIMARY KEY AUTO_INCREMENT, Name varchar(50) NOT NULL, Mobile varchar(50) NOT NULL, Address varchar(50) NOT NULL);
+
+CREATE TABLE messages (ID INT(11) PRIMARY KEY AUTO_INCREMENT, Name varchar(150), Contact varchar(50), Email varchar(200), Message text , Logs datetime );
+
+CREATE TABLE tea_record (Tea_ID int(11) PRIMARY KEY AUTO_INCREMENT,  Tea_Date varchar(20),Name varchar(100), Tea_KG bigint(20), Tea_Rate bigint(20), Tea_Total bigint(20) , Remarks varchar(300), Tea_Record datetime);
+
+CREATE TABLE tea_bill (TeaBill_ID int(12) PRIMARY KEY AUTO_INCREMENT, date varchar(50), Name varchar(50), Total_KG bigint(20), Basic_Wage bigint(20), OT bigint(20), Total_Amount bigint(20));
+
+CREATE TABLE blog (Blog_ID int(11) PRIMARY KEY AUTO_INCREMENT, Title varchar(255), Image varchar(255), Author varchar(255), Description text, Date datetime, Body text);
+
+CREATE TABLE chemical(Chemical_ID int(11) PRIMARY KEY AUTO_INCREMENT, Date varchar(255) NOT NULL, Name varchar(255) NOT NULL, Quantity bigint(20) NOT NULL, Rate bigint(20) NOT NULL, Total bigint(20) NOT NULL); 
+
+CREATE TABLE fertilizer(Fertilizer_ID int(11) PRIMARY KEY AUTO_INCREMENT, Date varchar(255) NOT NULL, Name varchar(255) NOT NULL, Quantity bigint(20) NOT NULL, Rate bigint(20) NOT NULL, Total bigint(20) NOT NULL); 
