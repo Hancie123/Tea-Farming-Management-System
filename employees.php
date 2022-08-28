@@ -132,6 +132,7 @@ while ($row=mysqli_fetch_array($search_result)) {
 <script>
   $(document).ready(function () {
     $('#hancie').DataTable();
+    
 });
 
   </script>

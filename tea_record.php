@@ -85,8 +85,6 @@ while($row = mysqli_fetch_array($result))
 <div class="form-floating mt-3 mb-3">
 <select class="form-select" id="remark" placeholder="Enter remark" name="remark" required>
 <option></option>
-<option>Third Round 2079</option>
-<option>Fouth Round 2079</option>
 <option>Fifth Round 2079</option>
 <option>Sixth Round 2079</option>
 </select>

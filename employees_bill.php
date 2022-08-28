@@ -66,8 +66,10 @@ while($row = mysqli_fetch_array($result))
 
 
 <label class="form-label" for="firstname">Name:</label>
-<select class="form-select" id="name" placeholder="Enter date" name="name">
-<option><?php echo $options;?></option></select>
+<input class="form-control" type="search" list="search keyword" id="searching" name="searching" >
+<datalist id="search keyword">
+<option><?php echo $options;?></option>
+</datalist>
 <br>
 
 
@@ -106,8 +108,6 @@ while($row = mysqli_fetch_array($result))
  <label class="form-label" for="remark">Remarks:</label>
 <select class="form-select" id="remark" placeholder="Enter remark" name="remark" required>
 <option></option>
-<option>Third Round 2079</option>
-<option>Fouth Round 2079</option>
 <option>Fifth Round 2079</option>
 <option>Sixth Round 2079</option>
 </select>
@@ -180,6 +180,7 @@ while($row = mysqli_fetch_array($result))
 <input type="submit" class="btn btn-primary btn-lg"  name="search1" value="Search">
 <a class="btn btn-primary btn-lg"  href="View_Bill.php" >View Bills</a>
 <a class="btn btn-primary btn-lg"  href="view-bill-record.php" value="View Tea Recoords">View Records</a>
+<a class="btn btn-primary btn-lg"  href="print_bill.php" value="Print Bill">Print Bill</a>
 
 </div>
 

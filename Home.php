@@ -92,7 +92,7 @@ if(!isset($_SESSION['username'])){
 
 <?php  
 include "connection.php";  
- $query = "SELECT Tea_Date, Tea_Total FROM tea_record ORDER BY tea_id DESC";  
+ $query = "SELECT Tea_Date, SUM(Tea_Total) as Total FROM tea_record GROUP BY Remarks ORDER BY tea_id DESC";  
  $result = mysqli_query($conn, $query);  
  ?>  
 
@@ -115,7 +115,7 @@ include "connection.php";
 <?php  
 while($row = mysqli_fetch_array($result))  
  {  
-  echo "['".$row["Tea_Date"]."', ".$row["Tea_Total"]."],";  
+  echo "['".$row["Tea_Date"]."', ".$row["Total"]."],";  
    }  
  ?> 
         ]);
@@ -177,13 +177,13 @@ Row Close -->
    <div class="w3-container w3-cell w3-mobile">
        <?php
         include "connection.php";
-         $sql ="SELECT * FROM tea_record ORDER BY Tea_ID DESC LIMIT 7";
+         $sql ="SELECT *, SUM(Tea_KG) as KG FROM tea_record GROUP BY Remarks ORDER BY Tea_ID DESC LIMIT 8";
          $result = mysqli_query($conn,$sql);
          $chart_data="";
          while ($row = mysqli_fetch_array($result)) { 
  
             $productname[]  = $row['Tea_Date']  ;
-            $sales[] = $row['Tea_Total'];
+            $sales[] = $row['KG'];
         }
  
  
